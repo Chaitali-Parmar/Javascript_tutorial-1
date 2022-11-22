@@ -1,0 +1,206 @@
+<!-- Tutorial for Javascript -->
+<!-- Topics to be covered -->
+<!-- 1.Introduction
+     2.Comments,Datatypes
+     3.Conditional Statements-Loops 
+     4.Operators
+     5.Functions,Local-Global Variables
+     6.Array
+     7.Popup Boxes
+     8.Events
+     9.DOM (Document Object Model)
+     10.Validations
+     11.String
+     12.Date-Time-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript Tutorial</title>
+    <link rel="stylesheet" href="all.css">
+    <script src="all.js"></script>
+</head>
+
+<body>
+    <p>Popup Boxes:</p>
+    <!-- Alertbox -->
+    <input type="button" value="Alert" onclick="alertbox()">
+    <!-- Confrimbox -->
+    <input type="button" value="Confirm" onclick="confirmbox()">
+    <!-- Promptbox -->
+    <input type="button" value="Prompt" onclick="promptbox()">
+    <input type="button" value="Prompt_Sum" onclick="promptbox1()"><br><br>
+
+    <!-- get value from user and sum of them -->
+    <p>Get value from user and sum of them: </p>
+    <form name="frm">
+        <table>
+            <tr>
+                <td>Enter NO1 <input type="text" name="txt1"></td>
+                <!-- </tr> -->
+                <!-- <tr> -->
+                <td>Enter NO2 <input type="text" name="txt2"></td>
+                <!-- </tr> -->
+                <!-- <tr> -->
+                <td>Ans <input type="text" name="ans" readonly></td>
+                <!-- </tr>
+            <tr> -->
+                <td>
+                    <input type="button" value="Sum_form" onclick="Sum_Form()">
+                </td>
+            </tr>
+        </table>
+        <p>Events:</p>
+        <p>Mouse Events:</p>
+    </form>
+    <!-- events -->
+    <!-- mouse events -->
+    <!-- onclick -->
+    <input type="button" value="Onclick" onclick="on_click()">
+    <!-- ondblclick -->
+    <input type="button" value="Ondblclick" ondblclick="on_dblclick()">
+    <!-- onmouseover & onmouseout -->
+    <img src="1.jpg" height="120px" width="120px" align="right" onmouseover="big(this)" onmouseout="small(this)">
+    <!-- onmouseup & onmousedown -->
+    <div onmouseup="on_up(this)" onmousedown="on_down(this)" align="center">Hello World</div>
+    <!-- onmousemove -->
+    <div align="center" onmousemove="on_move(this)">Hello World</div><br>
+    <!-- keyboard events -->
+    <!-- onkeyup -->
+    <form name="frm1">
+        Onkeyup: <input type="text" name="n1" onkeyup="key_up(this)">
+        <!-- onkeydown -->
+        Onkeydown: <input type="text" name="n2" onkeydown="key_down(this)">
+        <!-- onkeypress -->
+        Onkeypress: <input type="text" name="n3" onkeypress="key_press(this)">
+    </form>
+    <!-- form events -->
+    <!-- onfocus -->
+    <form name="frm2">
+        Onfocus: <input type="text" name="focus" onfocus="on_focus()">
+    </form>
+    <!-- onsubmit -->
+    <form name="frm3" onsubmit="on_submit(this)">
+        Onsubmit: <input type="text" name="submit">
+        <input type="submit" value="Submit_Form">
+    </form>
+    <!-- onblur -->
+    <form name="frm4">
+        Onblur: <input type="text" name="blur" onblur="on_blur()">
+    </form>
+    <!-- onchange -->
+    <form name="frm5">
+        <p>Onchange Example:</p>
+        <select name="select" onchange="on_change()">
+            <option value="Android">Android</option>
+            <option value="Python">Python</option>
+            <option value="Java">Java</option>
+            <option value="React">React</option>
+            <option value="Kotlin">Kotlin</option>
+        </select>
+    </form>
+    <!-- page redirection -->
+    <form>
+        <p>Page Redirection</p>
+        <input type="button" value="Google" onclick="redirect(this)">
+    </form>
+    <!-- DOM (document object model) -->
+    <!-- getelementbyid -->
+    <p>DOM methods (Document Object Model)</p>
+    <p>Document.getElementById:</p>
+    <p id="id">Hello World</p>
+    <input type="button" value="ID" onclick="By_Id()">
+    <!-- getelementbyname -->
+    <form>
+        <p>Document.getElementsByName:</p>
+        Enter Number: <input type="text" name="name">
+        <button onclick="By_Name()">Name</button>
+        <!--getelementbytagname  -->
+        <p>Document.getElementsByTagName:</p>
+        Write Tag:<input type="text">
+        <input type="button" value="Tag" onclick="By_Tag()">
+        <!-- getelementbyclassname -->
+        <p>Document.getElementByClassName:</p>
+        <p class="class">Hello World</p>
+        <p class="class1">Hello World</p>
+        <button onclick="By_Class()">Class</button>
+    </form>
+    <!-- validations -->
+    <!-- form validation -->
+    <form name="frm6" onsubmit="form_validate()">
+        <p>Javascript Validation</p>
+        <p>Form Validation:</p>
+        Enter Name: <input type="text" name="form">
+        <input type="submit" value="Submit">
+    </form>
+    <!-- Number validation -->
+    <form name="frm7" onsubmit="num_validate()">
+        <p>Number Validation:</p>
+        Enter Mobile No.:<input type="text" name="number">
+        <input type="submit" value="Submit">
+    </form>
+    <!-- Radio validation -->
+    <form name="frm8" onsubmit="radio_validate()">
+        <p>Radio Validation:</p>
+        Select Gender: <input type="radio" name="gender" value="M"> Male
+        <input type="radio" name="gender" value="F">Female
+        <input type="submit" value="Submit">
+    </form>
+    <!-- Checkbox validation -->
+    <form name="frm9" onsubmit="check_validate()">
+        <p>Checkbox Validation:</p>
+        Hobby: <input type="checkbox" name="hobby">Singing
+        <input type="checkbox" name="hobby">Dancing
+        <input type="checkbox" name="hobby">Cooking
+        <input type="checkbox" name="hobby">Sleeping
+        <input type="submit" value="Submit">
+    </form>
+    <!-- Dropdown validation -->
+    <form name="frm10" onsubmit="drop_validate()">
+        <p>Dropdown Validation:</p>
+        <select name="select">
+            <option value="1" selected>---Select City---</option>
+            <option value="Ahmedabad">Ahmedabad</option>
+            <option value="Surat">Surat</option>
+            <option value="Rajkot">Rajkot</option>
+            <option value="Mehsana">Mehsana</option>
+            <option value="Gandhinagar">Gandhinagar</option>
+        </select>
+        <input type="submit" value="Submit">
+    </form>
+    <!-- email validation -->
+    <form name="frm11" onsubmit="email_validate()">
+        <p>Email Validation:</p>
+        Enter Email: <input type="text" name="email">
+        <input type="submit" value="Submit">
+    </form>
+    <!-- Basic login validation -->
+    <!-- <form name="frm12">
+    <p>Basic Login Validation:</p>
+    UserName: <input type="text" name="user" onblur="b_login()">
+    Password: <input type="password" name="pwd" onblur="b_pass()">
+    <input type="button" value="Submit"> -->
+    <!-- </form>  -->
+    <form name="frm12" onsubmit="_basic()">
+        <p>Basic Login Validation:</p>
+    Username: <input type="text" name="user">
+    Password: <input type="password" name="pwd">
+    <input type="submit" value="Submit" name="sub">
+    <p>String:</p>
+    </form>
+</body>
+<!-- Window event -->
+<!-- onload -->
+
+<!-- <body onload="on_load()"> -->
+<!-- </body> -->
+<!-- onunload -->
+
+<!-- <body onunload="on_unload()">
+    <p>Note:Browser not supported</p>
+</body> -->
+<!-- onresize -->
+
+<!-- <body onresize="on_resize()">
+    <h1>This is A Text</h1>
+</body> -->
+</html>
